@@ -11,3 +11,24 @@
 
 ## Why is this address http and not https?
 This address uses http because 127.0.0.1 is my  laptop  had so  traffic never travels across a network where someone could read it. HTTPS protects data in transit and here there is no transit to protect my data and its server fails 
+
+
+
+## Specificity experiment
+An ID selector (#main p) has higher specificity (1,0,1) than a class and element selector (.hero p with 0,1,1), so it overrides the earlier rule regardless of order in the stylesheet. When changed to main p (0,0,2), it loses to .hero p and the hero paragraph returns to white.
+
+## Selectors I used
+
+ Selector kind  Example from my CSS 
+
+ Element  body 
+ Class  .card 
+ ID  #main 
+ Grouping (comma)  h1, h2, h3 
+ Descendant (space)  .nav-list a 
+ Child (>)  main > section 
+ Adjacent sibling (+)  h1 + p 
+ Compound (no space)  a.active 
+ Attribute  a[href^="http"]::after 
+ Pseudo-class  a:hover 
+ Pseudo-element  .menu-group h2::before 
