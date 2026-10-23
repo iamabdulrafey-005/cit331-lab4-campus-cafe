@@ -125,10 +125,23 @@
     </section>
   </main>
  
-  <footer class="site-footer">
-    <p>&copy; 2026 Campus Café &middot; Built for CIT331</p>
-    <p>Learn more: <a href="https://developer.mozilla.org/" target="_blank" rel="noopener noreferrer">MDN Web Docs</a></p>
-  </footer>
+    <form id="order-form" action="#" method="post">
+      <fieldset>
+        <legend>Your details</legend>
+        <div class="form-row">
+          <div class="field">
+            <label for="name">Full name *</label>
+            <input type="text" id="name" name="name" required minlength="3"
+                   maxlength="50" placeholder="e.g. Ayesha Khan" autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="phone">Mobile number *</label>
+            <input type="tel" id="phone" name="phone" required pattern="03[0-9]{9}"
+                   title="11 digits starting with 03, for example 03001234567"
+                   placeholder="03001234567" autocomplete="tel">
+          </div>
+        </div>
+      </fieldset>
  
   <a class="back-to-top" href="#top" aria-label="Back to top">&uarr;</a>
 </body>
