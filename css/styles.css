@@ -1,4 +1,3 @@
-
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -25,7 +24,6 @@ body {
   background: var(--bg);
 }
 
-
 h1, h2, h3 {
   font-family: Georgia, "Times New Roman", serif;
   color: var(--brand-dark);
@@ -50,7 +48,6 @@ textarea:focus-visible {
   outline-offset: 3px;
 }
 
-
 #main {
   max-width: 1000px;
   margin: 0 auto;
@@ -66,7 +63,6 @@ h1 + p {
   color: var(--muted);
 }
  
-
 .site-header {
   background: var(--brand-dark);
   color: #fff;
@@ -101,7 +97,6 @@ h1 + p {
   font-weight: 700;
 }
  
-
 .site-footer {
   background: var(--brand-dark);
   color: #fff;
@@ -109,7 +104,6 @@ h1 + p {
 }
 .site-footer p { margin: 4px 0; }
 .site-footer a { color: #fff; }
-
 
 .hero {
   background: var(--brand);
@@ -161,8 +155,6 @@ h1 + p {
 
 figcaption { color: var(--muted); font-size: 0.9rem; }
 
-
-
 .menu-group h2::before {
   content: "";
   display: inline-block;
@@ -207,13 +199,11 @@ thead th {
 tbody th { font-weight: 600; }
 tbody tr:nth-child(even) { background: #fbf6f0; }
  
-
 a[href^="http"]::after {
   content: " \2197";
   font-size: 0.85em;
 }
 
-/* ---------- 9. Forms ---------- */
 form > fieldset {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -260,17 +250,12 @@ input[placeholder]:not(:placeholder-shown):invalid {
   color: #0a6b50;
 }
 
-#main p {
-  color: red;
-}
-
 .site-header {
   position: sticky;
   top: 0;
   z-index: 100;
 }
  
-
 .menu-item { position: relative; }
 .badge {
   position: absolute;
@@ -284,7 +269,6 @@ input[placeholder]:not(:placeholder-shown):invalid {
   border-radius: 999px;
 }
  
-
 .back-to-top {
   position: fixed;
   right: 20px;
@@ -303,7 +287,6 @@ input[placeholder]:not(:placeholder-shown):invalid {
 }
 .back-to-top:hover { background: var(--brand-dark); color: #fff; }
  
-
 .skip-link {
   position: absolute;
   left: -9999px;
@@ -318,7 +301,6 @@ input[placeholder]:not(:placeholder-shown):invalid {
   padding: 8px 14px;
   border-radius: 8px;
 }
-
 
 .site-header {
   display: flex;
@@ -346,7 +328,6 @@ input[placeholder]:not(:placeholder-shown):invalid {
   gap: 8px 24px;
 }
 
-
 .card-row {
   display: flex;
   flex-wrap: wrap;
@@ -372,7 +353,6 @@ input[placeholder]:not(:placeholder-shown):invalid {
   gap: 12px;
 }
  
-
 body {
   min-height: 100vh;
   display: flex;
@@ -383,7 +363,7 @@ body {
   flex: 1;
 }
 
-
+.form-row {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
@@ -412,3 +392,21 @@ fieldset.choice {
  
 .saved-orders { margin-top: 40px; }
 .table-wrap { overflow-x: auto; margin-bottom: 16px; }
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+ 
+@media (max-width: 768px) {
+  h1 { font-size: 1.9rem; }
+  #main { padding: 16px; }
+  .hero { padding: 32px 20px; }
+  .site-header { flex-direction: column; align-items: flex-start; }
+}
+ 
+@media (max-width: 480px) {
+  .nav-list { flex-wrap: wrap; }
+  .btn { display: block; width: 100%; text-align: center; }
+  .site-footer { flex-direction: column; align-items: flex-start; }
+}
