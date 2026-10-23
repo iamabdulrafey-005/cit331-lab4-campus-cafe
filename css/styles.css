@@ -270,7 +270,7 @@ input[placeholder]:not(:placeholder-shown):invalid {
   z-index: 100;
 }
  
-/* absolute: placed inside its nearest positioned parent */
+
 .menu-item { position: relative; }
 .badge {
   position: absolute;
@@ -284,7 +284,7 @@ input[placeholder]:not(:placeholder-shown):invalid {
   border-radius: 999px;
 }
  
-/* fixed: stays in the corner of the screen */
+
 .back-to-top {
   position: fixed;
   right: 20px;
@@ -303,7 +303,7 @@ input[placeholder]:not(:placeholder-shown):invalid {
 }
 .back-to-top:hover { background: var(--brand-dark); color: #fff; }
  
-/* skip link: parked off-screen until it gets keyboard focus */
+
 .skip-link {
   position: absolute;
   left: -9999px;
@@ -318,3 +318,97 @@ input[placeholder]:not(:placeholder-shown):invalid {
   padding: 8px 14px;
   border-radius: 8px;
 }
+
+
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.nav-list {
+  display: flex;
+  gap: 8px;
+  margin: 0;
+}
+ 
+.site-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 24px;
+}
+
+
+.card-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.card-row > .card {
+  flex: 1 1 260px;
+}
+ 
+.menu-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.menu-item {
+  flex: 1 1 300px;
+  margin-bottom: 0;
+}
+.item-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+}
+ 
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+#main {
+  width: 100%;
+  flex: 1;
+}
+
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.form-row > .field,
+.form-row > .choice {
+  flex: 1 1 220px;
+}
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 4px;
+}
+ 
+fieldset.choice {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px 16px;
+}
+ 
+.saved-orders { margin-top: 40px; }
+.table-wrap { overflow-x: auto; margin-bottom: 16px; }
