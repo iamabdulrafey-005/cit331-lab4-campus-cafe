@@ -17,18 +17,24 @@ This address uses http because 127.0.0.1 is my  laptop  had so  traffic never tr
 ## Specificity experiment
 An ID selector (#main p) has higher specificity (1,0,1) than a class and element selector (.hero p with 0,1,1), so it overrides the earlier rule regardless of order in the stylesheet. When changed to main p (0,0,2), it loses to .hero p and the hero paragraph returns to white.
 
-## Selectors I used
 
- Selector kind  Example from my CSS 
 
- Element  body 
- Class  .card 
- ID  #main 
- Grouping (comma)  h1, h2, h3 
- Descendant (space)  .nav-list a 
- Child (>)  main > section 
- Adjacent sibling (+)  h1 + p 
- Compound (no space)  a.active 
- Attribute  a[href^="http"]::after 
- Pseudo-class  a:hover 
- Pseudo-element  .menu-group h2::before 
+
+
+
+## Bug hunt findings
+
+1. **CSS Link and Filename Mismatch:**
+   - **Symptom:** Website was displaying completely unstyled plain HTML text across all pages.
+   - **Root Cause:** HTML files referenced `css/styles.css`, but the stylesheet was named `style.css` inside a folder named `cs`.
+   - **Fix:** Renamed directory to `css` and stylesheet to `styles.css`.
+
+2. **Malformed HTML and Broken Tags in `order.html`:**
+   - **Symptom:** Page layout broken with duplicate `<main>` wrappers and misplaced structural tags.
+   - **Root Cause:** Merge conflict leftovers and unclosed tags caused invalid nesting.
+   - **Fix:** Cleaned markup, ensured one single `<main id="main">` block, valid fieldset pairing, and valid document closure.
+
+3. **Safe DOM Insertion in `order.js`:**
+   - **Symptom:** Potential cross-site scripting (XSS) risk if user input contains HTML/JavaScript.
+   - **Root Cause:** Directly inserting raw user strings into innerHTML executes unsafe tags.
+   - **Fix:** Used `cell.textContent = text;` inside `addCell()` to ensure customer text is treated strictly as plain text.
