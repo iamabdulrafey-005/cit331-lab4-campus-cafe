@@ -11,3 +11,19 @@
 
 ## Why is this address http and not https?
 This address uses http because 127.0.0.1 is my  laptop  had so  traffic never travels across a network where someone could read it. HTTPS protects data in transit and here there is no transit to protect my data and its server fails 
+
+
+
+
+Selectors I used   Selector kind: Example from my CSS
+Element: body
+Class: .card
+ID: #main
+Grouping (comma): h1, h2, h3
+Descendant (space): .nav-list a
+Child (>): main > section
+Adjacent sibling (+): h1 + p
+Compound (no space): a.active
+Attribute: a[href^="http"]::after
+Pseudo-class: a:hover
+Pseudo-element: .menu-group h2::before 
